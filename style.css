@@ -1,0 +1,329 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #747070;
+    line-height: 1.6;
+}
+section {
+  scroll-margin-top: 280px;
+}
+header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 100;
+    padding: 1rem 0;
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    background: linear-gradient(45deg, #2563EB, #7C3AED, #D946EF, #F59E0B);
+    background-size: 300%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    font-weight: 600;
+    text-transform: uppercase;
+    animation: gradient 10s linear infinite;
+    text-align: center;
+    margin: 0;
+    padding: 0 1rem;
+}
+
+/* New container for side-by-side headings */
+.heading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px; /* Adjust this value for spacing between headings */
+    margin-top: -30px;
+}
+
+h2.left, h2.right {
+    font-size: 1.5rem;
+    color: #adaaaa;
+    text-align: center;
+    margin: 0; /* Remove individual margins */
+    /* Remove the old margin-left/right and margin-top values */
+}
+
+nav {
+    margin-top: 1rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
+    transition: color 0.3s ease;
+    font-weight: 400;
+}
+
+nav a:hover {
+    color: #F59E0B;
+    text-decoration: none;
+}
+
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: clamp(2rem, 6vw, 4rem);
+    }
+    
+    .heading-container {
+        flex-direction: column; /* Stack vertically on small screens */
+        gap: 10px;
+    }
+    
+    nav ul {
+        gap: 1rem;
+    }
+    
+    nav a {
+        font-size: 1rem;
+    }
+    
+    p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+} 
+
+/* About Me Section */
+.about-me {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #F59E0B;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #2563EB, #F59E0B);
+  margin: 0.5rem auto 0;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .about-content p {
+    font-size: 1rem;
+    text-align: left;
+  }
+}
+
+/* Skills Section */
+.skills {
+  max-width: 1200px;
+  margin: 0 auto; /* Reduced top margin */
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+/* Skills Section */
+.skills {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #F59E0B;
+  margin-bottom: 0.1rem; /* Minimal gap below title */
+  position: relative;
+}
+
+.skills-image-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.2rem; /* Minimal gap above image */
+}
+
+.skills img {
+  width: 440px;
+  height: 200px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.skills img:hover {
+  transform: scale(1.03);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .skills img {
+    width: 280px;
+    height: auto;
+  }
+  
+  .section-title {
+    margin-bottom: 0.05rem;
+  }
+  
+  .skills-image-container {
+    margin-top: 0.1rem;
+  }
+}
+.project-item{
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  text-align: center
+  
+}
+
+/* Add this to your existing CSS file */
+
+/* Projects Section */
+.projects {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.project-item {
+  background-color: rgba(30, 30, 30, 0.7);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 3px solid #F59E0B;
+  margin-top: 30px;
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(245, 158, 11, 0.1);
+}
+
+.project-item h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.project-item h3 a {
+  color: #F59E0B;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-item h3 a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.project-item p {
+  color: #e0e0e0;
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Contact Section */
+.contact {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.contact-content p {
+  color: #e0e0e0;
+  font-size: 1.1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .project-item {
+    padding: 1rem;
+  }
+  
+  .project-item h3 {
+    font-size: 1.3rem;
+  }
+  
+  .project-item p {
+    font-size: 0.9rem;
+  }
+}
+
+footer {
+  font-size: 14px;
+  text-align: center;
+  color: #888383;
+  left: 0;
+  bottom: 5px;
+  width: 100%;
+  margin-top: 100px;
+}
